@@ -4,8 +4,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const { PORT } = require('./config/serverConfig');
-
 const ApiRoutes = require('./routes/index');
+
+const db = require('./models/index');
+//const {City, Airport} = require('./models/index');
 
 const setupAndStartServer = async () => {
     // create the express object
@@ -16,8 +18,29 @@ const setupAndStartServer = async () => {
 
     app.use('/api', ApiRoutes);
 
-    app.listen(PORT, () => {
+    app.listen(PORT, async () => {
         console.log(`Server started at ${PORT}`);
+        if(process.env.SYNC_DB) {
+            db.sequelize.sync({alter: true});
+        }
+        /*const city = await City.findOne({
+            where: {
+                id: 17
+            }
+        });
+        const airports = await city.getAirports();
+        /*const newAirport = await Airport.create({
+            name: 'Jindal Vijaynagar Airport',
+            cityId: 12
+        });*/
+        /*const newAirport = await Airport.findOne({
+            where: {
+                id: 25
+            }
+        });
+        await city.addAirport(newAirport);
+        console.log(city, airports);*/
+
     });
 }
 
