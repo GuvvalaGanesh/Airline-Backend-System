@@ -38,6 +38,12 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
       },
+      {
+        modelNumber: 'Bombardier CRJ',
+        capacity: 150,
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
     ], {});
   },
 
