@@ -1,3 +1,4 @@
+const flights = require('../models/flights');
 const { FlightRepository, AirplaneRespository } = require('../repository/index');
 const { compareTime } = require('../utils/helper');
 
@@ -23,8 +24,24 @@ class FlightService {
         }
     }
 
-    async getFlightData() {
-        //todo   
+    async getFlightData(flightId) {
+        try {
+            const flight = await this.flightRespository.getFlight(flightId);
+            return flight;
+        } catch (error) {
+            console.log("Something went wrong at service layer");
+            throw {error};
+        }
+    }
+
+    async getAllFlightsData(data) {
+        try {
+            const flights = await this.flightRespository.getAllFlights(data);
+            return flights;
+        } catch (error) {
+            console.log("Something went wrong at service layer");
+            throw {error};
+        }
     }
 }
 
