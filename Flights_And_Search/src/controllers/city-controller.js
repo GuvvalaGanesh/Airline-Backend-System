@@ -35,7 +35,7 @@ const destroy = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        return res.status(501).json({
+        return res.status(500).json({
             data: {},
             success: false,
             message: "Not able to delete the city",
@@ -56,7 +56,7 @@ const update = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        return res.status(502).json({
+        return res.status(500).json({
             data: {},
             success: false,
             message: "Not able to update the city",
@@ -77,7 +77,7 @@ const get = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        return res.status(503).json({
+        return res.status(500).json({
             data: {},
             success: false,
             message: "Not able to fetch the city",
@@ -97,7 +97,7 @@ const getAll = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        return res.status(504).json({
+        return res.status(500).json({
             data: {},
             success: false,
             message: "Not able to fetch all the cities",
