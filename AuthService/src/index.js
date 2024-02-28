@@ -9,6 +9,8 @@ const apiRoutes = require('./routes/index');
 // const bcrypt = require('bcrypt');
 // const { User } = require('./models/index');
 
+// const UserRepository = require('./repository/user-repository');
+
 const prepareAndStartServer = () => {
     
     app.use(bodyParser.json());
@@ -18,6 +20,10 @@ const prepareAndStartServer = () => {
 
     app.listen(PORT, async () => {
         console.log(`Server started on ${PORT}`);
+
+        // const repo = new UserRepository();
+        // const response = await repo.getById(5);
+        // console.log(response);
 
         // const password = 'hero123';
         // const user = await User.findByPk(5);
