@@ -10,6 +10,8 @@ const apiRoutes = require('./routes/index');
 // const { User } = require('./models/index');
 
 // const UserRepository = require('./repository/user-repository');
+// const UserService = require('./services/user-service');
+
 
 const prepareAndStartServer = () => {
     
@@ -20,6 +22,14 @@ const prepareAndStartServer = () => {
 
     app.listen(PORT, async () => {
         console.log(`Server started on ${PORT}`);
+
+        // const userService = new UserService();
+        // const newToken = userService.createToken({email: 'ganeshguvvala2@gmail.com', id:1});
+        // console.log(newToken);
+
+        // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhbmVzaGd1dnZhbGEyQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MDkxNzU4MTgsImV4cCI6MTcwOTE3NTgyOH0.QjVDK6nvKHPW-oXozsaCnUzFU4P3BkAC7w01aFtHnFI';
+        // const response = userService.verifyToken(token);
+        // console.log(response);
 
         // const repo = new UserRepository();
         // const response = await repo.getById(5);
