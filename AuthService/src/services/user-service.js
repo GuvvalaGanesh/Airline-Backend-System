@@ -22,10 +22,10 @@ class UserService {
 
     async signIn(email, plainPassword) {
         try {
-            // step 1 -> 
+            // step 1 -> fetch the user using the email
             const user = await this.userRepository.getByEmail(email);
 
-            // step 2 -> 
+            // step 2 -> compare incoming plain password with stores encrypted password
             const passwordsMatch = this.checkPassword(plainPassword, user.password);
 
             if(!passwordsMatch) {
@@ -33,11 +33,28 @@ class UserService {
                 throw {error: 'Incorrect password'};
             }
 
-            // step 3 -> 
+            // step 3 -> if passwords match then create a token and send it to the user
             const newJWT = this.createToken({email: user.email, id: user.id});
             return newJWT;
         } catch (error) {
             console.log('Something went wrong in sign in process');
+            throw error;
+        }
+    }
+
+    async isAuthenticated(token) {
+        try {
+            const response = this.verifyToken(token);
+            if(!response){
+                throw {error: 'Invalid token'}
+            }
+            const user = this.userRepository.getById(response.id);
+            if(!user){
+                throw {error: 'No user with the corresponding token exists'}
+            }
+            return user.id;
+        } catch (error) {
+            onsole.log('Something went wrong in the auth process');
             throw error;
         }
     }
