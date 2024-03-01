@@ -12,9 +12,9 @@ const apiRoutes = require('./routes/index');
 // const UserRepository = require('./repository/user-repository');
 // const UserService = require('./services/user-service');
 
-const db = require('./models/index');
+// const db = require('./models/index');
 
-const { User, Role } = require('./models/index');
+// const { User, Role } = require('./models/index');
 
 const prepareAndStartServer = () => {
     
@@ -29,12 +29,12 @@ const prepareAndStartServer = () => {
             db.sequelize.sync({alter: true})
         }
 
-        const u1 = await User.findByPk(5);
-        const r1 = await Role.findByPk(2);
+        // const u1 = await User.findByPk(5);
+        // const r1 = await Role.findByPk(2);
         // u1.addRole(r1);
         // const response = await u1.getRoles();
-        const response = await u1.hasRole(r1);
-        console.log(response);
+        // const response = await u1.hasRole(r1);
+        // console.log(response);
 
         // const userService = new UserService();
         // const newToken = userService.createToken({email: 'ganeshguvvala2@gmail.com', id:1});
