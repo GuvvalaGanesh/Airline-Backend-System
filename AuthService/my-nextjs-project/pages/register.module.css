@@ -1,0 +1,72 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container form div {
+    margin-bottom: 15px;
+  }
+  
+  .container form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .container form input[type='text'],
+  .container form input[type='email'],
+  .container form input[type='tel'],
+  .container form input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container form button[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .container form p {
+    margin-top: 10px;
+  }
+  
+  .container form button[type='button'] {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: #ff0000; /* Red color for error messages */
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .label1 {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }

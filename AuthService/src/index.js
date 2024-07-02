@@ -12,7 +12,7 @@ const apiRoutes = require('./routes/index');
 // const UserRepository = require('./repository/user-repository');
 // const UserService = require('./services/user-service');
 
-// const db = require('./models/index');
+const db = require('./models/index');
 
 // const { User, Role } = require('./models/index');
 
