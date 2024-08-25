@@ -10,9 +10,9 @@
 ```
 {
   "development": {
-    "username": <YOUR_DB_LOGIN_NAME>,
+    "username": <YOUR_DB_USER_NAME>,
     "password": <YOUR_DB_PASSWORD>,
-    "database": "Flights Search DB DEV",
+    "database": "Flights_Search_DB_DEV",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
@@ -20,6 +20,7 @@
 
 ```
 - Once you've added your db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create` and then execute `npx sequelize db:migrate`
+- Start with `npm start`
 
 ```
 

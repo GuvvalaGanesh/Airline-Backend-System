@@ -1,4 +1,4 @@
-# Welcome to Auth Search Service
+# Welcome to Reminder Service
 
 ## Project Setup
 - Execute `npm install` inside this folder for install all the dependencies.
@@ -11,7 +11,7 @@
   "development": {
     "username": <YOUR_DB_USER_NAME>,
     "password": <YOUR_DB_PASSWORD>,
-    "database": "AUTH_DB_DEV",
+    "database": "REMINDER_DB_DEV",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
