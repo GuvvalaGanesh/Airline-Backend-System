@@ -1,3 +1,8 @@
+# Welcome to Auth Search Service
+
+## Project Setup
+- Execute `npm install` inside this folder for install all the dependencies.
+
 FRONTEND - MIDDLE-END - BACKEND
 
     - We need an intermediate layer between the client side and the microservices

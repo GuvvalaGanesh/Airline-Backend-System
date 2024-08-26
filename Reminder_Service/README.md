@@ -1,23 +1,50 @@
 # Welcome to Reminder Service
 
 ## Project Setup
-- Execute `npm install` inside this folder for install all the dependencies.
-- Copy .sample.env to .env
-    - `cp .sample.env .env`
-- Inside the `src/config` folder create a new file `config.json` and then add the following piece of json
 
-```
-{
-  "development": {
-    "username": <YOUR_DB_USER_NAME>,
-    "password": <YOUR_DB_PASSWORD>,
-    "database": "REMINDER_DB_DEV",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
-```
-- Once you've added your db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create` and then execute `npx sequelize db:migrate`
-- Start with `npm start`
+1. After cloning this project, navigate into the `Reminder_Service` directory:
+    ```
+    cd Reminder_Service
 
-```
+    ```
+
+2. Install all the dependencies:
+    ```
+    npm install
+
+    ```
+
+3. Inside the `src/config` folder, create a new file named `config.json` and add the following configuration:
+
+    ```
+    {
+      "development": {
+        "username": "<YOUR_DB_USER_NAME>",
+        "password": "<YOUR_DB_PASSWORD>",
+        "database": "REMINDER_DB_DEV",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+      }
+    }
+
+    ```
+
+4. Once you've added your database configuration as shown above, navigate to the `src` folder in your terminal and execute the following commands to create and migrate the database:
+
+    ```
+    npx sequelize db:create
+    npx sequelize db:migrate
+
+    ```
+
+5. Copy the `.sample.env` file to `.env`:
+    ```
+    cp .sample.env .env
+
+    ```
+
+6. Start the application:
+    ```
+    npm start
+    
+    ```
