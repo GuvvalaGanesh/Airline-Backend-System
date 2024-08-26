@@ -1,10 +1,10 @@
-# Welcome to Auth Service
+# Welcome to Booking Service
 
 ## Project Setup
 
-1. After cloning this project, navigate into the `AuthService` directory:
+1. After cloning this project, navigate into the `Booking_Service` directory:
     ```
-    cd AuthService
+    cd Booking_Service
 
     ```
 
@@ -21,7 +21,7 @@
       "development": {
         "username": "<YOUR_DB_USER_NAME>",
         "password": "<YOUR_DB_PASSWORD>",
-        "database": "AUTH_DB_DEV",
+        "database": "BOOKING_DB_DEV",
         "host": "127.0.0.1",
         "dialect": "mysql"
       }

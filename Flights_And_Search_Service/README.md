@@ -2,9 +2,9 @@
 
 ## Project Setup
 
-1. After cloning this project, navigate into the `Flights_And_Search` directory:
+1. After cloning this project, navigate into the `Flights_And_Search_Service` directory:
     ```
-    cd Flights_And_Search
+    cd Flights_And_Search_Service
 
     ```
 
