@@ -1,7 +1,21 @@
-# Welcome to Auth Search Service
+# Welcome to API Gateway Service
 
 ## Project Setup
-- Execute `npm install` inside this folder for install all the dependencies.
+
+1. After cloning this project, navigate into the `API_Gateway` directory:
+    ```
+    cd API_Gateway
+    ```
+
+2. Install all the dependencies:
+    ```
+    npm install
+    ```
+    
+3. Start the application:
+    ```
+    npm start
+    ```
 
 FRONTEND - MIDDLE-END - BACKEND
 
